@@ -1,0 +1,15 @@
+{
+    "name" : "MyTestPipeline",
+    "description" : "My test pipeline",
+    "version": "1.0.0",
+    "type": "job",
+    "contacts" :
+    [
+        ["Anne-Sophie Denommé-Pichon", "as.denomme@outlook.com"],
+        ["Arkanosis", "jroquet@arkanosis.net"]
+    ]
+    "inputs" : "/var/regovar/input/",
+    "outputs" : "/var/regovar/output/",
+    "logs" : "/var/regovar/logs/",
+    "databases": "/var/regovar/databases/",
+    "regovar_db_access": false,
