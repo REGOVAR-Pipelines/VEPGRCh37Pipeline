@@ -6,7 +6,7 @@ PACKAGE_NAME = $(shell sed -n 's/.*"name"\s*:\s*"\([^"]*\)".*/\1/p' manifest.jso
 
 package: $(PACKAGE_NAME)
 
-$(PACKAGE_NAME): doc Dockerfile form.json LICENSE manifest.json README
+$(PACKAGE_NAME): doc Dockerfile form.json LICENSE manifest.json README run.sh
 	zip -r $@ $^ 
 
 build:

@@ -7,9 +7,11 @@
     [
         ["Anne-Sophie Denommé-Pichon", "as.denomme@outlook.com"],
         ["Arkanosis", "jroquet@arkanosis.net"]
-    ]
+    ],
     "inputs" : "/regovar/inputs/",
     "outputs" : "/regovar/outputs/",
     "logs" : "/regovar/logs/",
     "databases": "/regovar/databases/",
-    "regovar_db_access": false,
+    "regovar_db_access": false
+}
+
