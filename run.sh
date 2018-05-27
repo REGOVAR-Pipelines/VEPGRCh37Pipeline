@@ -1,3 +1,4 @@
 #! /bin/sh
 
-echo "Hello" > /regovar/output/test.sh
+echo "Hello" > /regovar/outputs/test.txt
+

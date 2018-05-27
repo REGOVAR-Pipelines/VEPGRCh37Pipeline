@@ -1,5 +1,5 @@
 # Start with a minimal Docker image
-FROM scratch
+FROM alpine:latest
 
 # Copy the pipeline scripts from the ouside of the container into the container
 COPY run.sh /
