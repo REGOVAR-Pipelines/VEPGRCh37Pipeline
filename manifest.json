@@ -1,12 +1,12 @@
 {
-    "name" : "MyTestPipeline",
-    "description" : "My test pipeline",
+    "name" : "VEPGRCh37Pipeline",
+    "description" : "Pipeline to annotate VCF with VEP using GRCh37",
     "version": "1.0.0",
     "type": "job",
     "contacts" :
     [
         ["Anne-Sophie Denommé-Pichon", "as.denomme@outlook.com"],
-        ["Arkanosis", "jroquet@arkanosis.net"]
+        ["Jérémie Roquet", "jroquet@arkanosis.net"]
     ],
     "inputs" : "/regovar/inputs/",
     "outputs" : "/regovar/outputs/",

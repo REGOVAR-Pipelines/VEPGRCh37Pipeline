@@ -1,7 +1,5 @@
-# Change paths for inputs, outputs, databases and logs in the host and in the container.
-
 CONTAINER_NAME = regovar_test
-IMAGE_NAME = my_example_pipeline
+IMAGE_NAME = vep_grch37_pipeline
 PACKAGE_NAME = $(shell sed -n 's/.*"name"\s*:\s*"\([^"]*\)".*/\1/p' manifest.json)_v$(shell sed -n 's/.*"version"\s*:\s*"\([^"]*\)".*/\1/p' manifest.json).zip
 
 package: $(PACKAGE_NAME)

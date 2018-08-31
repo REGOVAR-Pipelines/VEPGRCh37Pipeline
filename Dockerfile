@@ -1,13 +1,16 @@
-# Start with a minimal Docker image
-FROM alpine:latest
+FROM continuumio/miniconda:latest
 
-# Copy the pipeline scripts from the ouside of the container into the container
+RUN \
+  curl "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/human_g1k_v37.fasta.gz" -o /human_g1k_v37.fasta.gz
+
+RUN \
+  mkdir -p /regovar/{inputs,outputs,logs,databases} && \
+  conda config --add channels defaults && \
+  conda config --add channels conda-forge && \
+  conda config --add channels bioconda && \
+  conda install ensembl-vep && \
+  vep_install -a cf -s homo_sapiens -y GRCh37 -c /.vep –CONVERT
+
 COPY run.sh /
 
-# Use root in the container to make the script executable
-USER root
-RUN chmod +x /run.sh
-RUN mkdir -p /regovar/{inputs,outputs,logs,databases}
-
-# Run the pipeline
 CMD ["/run.sh"]
