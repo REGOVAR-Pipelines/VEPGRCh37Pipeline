@@ -6,7 +6,7 @@ for file in "*.vcf"; do
     --fork 2 \
     --buffer_size 200000 \
     --cache --dir /.vep --offline \
-    --fasta /human_g1k_v37.fasta.gz \
+    --fasta "/regovar/databases/GRCh37/human_g1k_v37.fasta" \
     --db_version 92 \
     --species homo_sapiens \
     --assembly GRCh37 \
@@ -18,7 +18,7 @@ for file in "*.vcf"; do
     --format vcf \
     --vcf \
     --no_stats \
-    -i "/inputs/$file" \
-    -o "/outputs/$file" \
-    > "/logs/$file.log"
+    -i "/regovar/inputs/$file" \
+    -o "/regovar/outputs/$file" \
+    > "/regovar/logs/$file.log"
 done
