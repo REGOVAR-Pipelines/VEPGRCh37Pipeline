@@ -1,7 +1,7 @@
 #! /bin/sh
 
-cd /inputs
-for file in "*.vcf"; do
+cd "/regovar/inputs"
+for file in *.vcf; do
   vep \
     --fork 2 \
     --buffer_size 200000 \
