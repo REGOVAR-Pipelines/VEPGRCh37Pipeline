@@ -8,7 +8,7 @@ RUN \
   conda config --add channels conda-forge && \
   conda config --add channels bioconda && \
   conda install ensembl-vep && \
-  vep_install -a cf -s homo_sapiens -y GRCh37 -c /.vep --CONVERT && \
+  vep_install -a cfp -s homo_sapiens -y GRCh37 -c /.vep --CONVERT --PLUGINS all \
   chmod a+x /run.sh
 
 CMD ["/run.sh"]
